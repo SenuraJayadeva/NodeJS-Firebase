@@ -4,8 +4,17 @@
   "description": "sample project for nodejs with firebase",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js",
+    "server": "nodemon server.js"
+
   },
   "author": "senura jayadeva",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "firebase": "^8.2.1",
+    "nodemon": "^2.0.6"
+  }
 }

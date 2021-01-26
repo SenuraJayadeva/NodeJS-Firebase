@@ -16,6 +16,7 @@ app.get("/", (req, res) => res.send("Api Running"));
 
 //-------------------Senura---------------------
 app.use("/api/student", require("./routes/student.route"));
+app.use("/api/admin", require("./routes/auth.route"));
 
 const PORT = process.env.PORT || 5000;
 

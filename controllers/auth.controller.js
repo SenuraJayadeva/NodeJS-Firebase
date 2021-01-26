@@ -20,7 +20,6 @@ const registerAdmin = async (req, res) => {
 
     if (!query.empty) {
       let snapshot = query.docs[0];
-      let user = snapshot.data();
       return res.status(400).json({ errors: [{ msg: "User already exist" }] });
     } else {
       //Encrypt Password
@@ -38,7 +37,7 @@ const registerAdmin = async (req, res) => {
           email,
           password,
         };
-        await firestore.collection("admins").doc().set(data);
+        await firestore.collection("admins").doc().set(user);
         //res.send("Recored saved successfully");
 
         //Return jsonwebtoken

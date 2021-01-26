@@ -1,7 +1,9 @@
 class Student {
-  constructor(id, name, age) {
-    this.id = id;
+  constructor(itnum, name, age) {
+    this.itnum = itnum;
     this.name = name;
     this.age = age;
   }
 }
+
+module.exports = Student;
